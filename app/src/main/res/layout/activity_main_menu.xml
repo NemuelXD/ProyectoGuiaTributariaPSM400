@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_color1"
+    tools:context=".MainActivityMenu">
+
+    <LinearLayout
+        android:layout_width="412dp"
+        android:layout_height="735dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="75dp" />
+
+        <LinearLayout
+            android:layout_width="363dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="264dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="SELECCIONE LA GUIA DE SU PREFERENCIA"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold|italic" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/gif_asistente1" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <LinearLayout
+            android:layout_width="330dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button14"
+                android:layout_width="248dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_color2"
+                android:text="Inicio de Sesion"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/gif_asistente2" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <LinearLayout
+            android:layout_width="330dp"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="248dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_color2"
+                android:text="Formulario 110"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:icon="@drawable/formulario"
+                app:iconGravity="textEnd"
+                app:iconPadding="10dp"
+                app:iconTint="@null" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/gif_asistente2" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <LinearLayout
+            android:layout_width="330dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_color2"
+                android:text="Formulario 610"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:icon="@drawable/formulario"
+                app:iconGravity="textEnd"
+                app:iconPadding="10dp"
+                app:iconTint="@null" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/gif_asistente2" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <LinearLayout
+            android:layout_width="330dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_color2"
+                android:text="Formulario 200"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:icon="@drawable/formulario"
+                app:iconGravity="textEnd"
+                app:iconPadding="10dp"
+                app:iconTint="@null" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/gif_asistente3" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <LinearLayout
+            android:layout_width="330dp"
+            android:layout_height="46dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_color2"
+                android:text="Formulario 400"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:icon="@drawable/formulario"
+                app:iconGravity="textEnd"
+                app:iconPadding="10dp"
+                app:iconTint="@null" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/gif_asistente3" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <LinearLayout
+            android:layout_width="330dp"
+            android:layout_height="46dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button15"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_color2"
+                android:text="RC-IVA"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:icon="@drawable/iva"
+                app:iconGravity="textEnd"
+                app:iconPadding="10dp"
+                app:iconTint="@null" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/gif_asistente3" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <ImageButton
+            android:id="@+id/imgButtonInicio"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/inicio" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
