@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:text="FORMULARIO 110"
+                android:text="INICIO DE SECION"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
@@ -50,6 +50,7 @@
             android:layout_height="10dp" />
 
         <LinearLayout
+            android:id="@+id/layoutGuia01"
             android:layout_width="match_parent"
             android:layout_height="72dp"
             android:orientation="horizontal">
@@ -60,12 +61,11 @@
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/buttonGuia01"
                 android:layout_width="57dp"
                 android:layout_height="71dp"
                 android:layout_weight="1"
                 android:backgroundTint="#177FD4"
-                android:text="1"
                 android:textSize="24sp"
                 android:textStyle="italic" />
 
@@ -74,7 +74,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
 
-            <TextView
+            <com.nitish.typewriterview.TypeWriterView
                 android:id="@+id/textView10"
                 android:layout_width="256dp"
                 android:layout_height="70dp"
@@ -82,66 +82,7 @@
                 android:layout_weight="1"
                 android:fontFamily="sans-serif"
                 android:gravity="center_vertical"
-                android:text="Debe ingresar al siguiente sitio web https://www.impuestos.gob.bo"
-                android:textColor="#FFFFFF"
-                android:textSize="14sp"
-                android:textStyle="italic" />
-
-            <Space
-                android:layout_width="27dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
-
-        </LinearLayout>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
-            app:srcCompat="@drawable/imgform110_01" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="71dp"
-            android:orientation="horizontal">
-
-            <Space
-                android:layout_width="30dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="57dp"
-                android:layout_height="71dp"
-                android:layout_weight="1"
-                android:backgroundTint="#177FD4"
-                android:text="2"
-                android:textSize="24sp"
-                android:textStyle="italic" />
-
-            <Space
-                android:layout_width="12dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="256dp"
-                android:layout_height="70dp"
-                android:layout_gravity="start"
-                android:layout_weight="1"
-                android:fontFamily="sans-serif"
-                android:gravity="center_vertical"
-                android:text="Debe ingresar al siguiente sitio web https://www.impuestos.gob.bo"
+                android:text=""
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 android:textStyle="italic" />
@@ -158,8 +99,78 @@
             android:layout_height="10dp" />
 
         <RelativeLayout
+            android:id="@+id/layoutImg01"
             android:layout_width="match_parent"
             android:layout_height="160dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                app:srcCompat="@drawable/imgform110_01" />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:id="@+id/layoutGuia02"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <Space
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/buttonGuia02"
+                android:layout_width="57dp"
+                android:layout_height="71dp"
+                android:layout_weight="1"
+                android:backgroundTint="#177FD4"
+                android:textSize="24sp"
+                android:textStyle="italic"
+                android:visibility="visible" />
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <com.nitish.typewriterview.TypeWriterView
+                android:id="@+id/textView11"
+                android:layout_width="256dp"
+                android:layout_height="70dp"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:visibility="visible" />
+
+            <Space
+                android:layout_width="27dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <RelativeLayout
+            android:id="@+id/layoutImg02"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:visibility="invisible">
 
             <ImageView
                 android:id="@+id/imageView6"
@@ -192,7 +203,7 @@
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/button8"
+                android:id="@+id/buttonContinuar"
                 android:layout_width="185dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

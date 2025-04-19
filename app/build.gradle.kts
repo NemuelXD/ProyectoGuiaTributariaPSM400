@@ -37,6 +37,7 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.glide) //libreria para gif
     implementation(libs.gifDrawable)
+    implementation(libs.typewriter)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
