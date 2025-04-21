@@ -45,15 +45,12 @@
                 android:src="@drawable/gif_asistente2" />
         </LinearLayout>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp" />
-
         <LinearLayout
             android:id="@+id/layoutGuia01"
             android:layout_width="match_parent"
-            android:layout_height="72dp"
-            android:orientation="horizontal">
+            android:layout_height="84dp"
+            android:orientation="horizontal"
+            android:visibility="invisible">
 
             <Space
                 android:layout_width="30dp"
@@ -62,11 +59,12 @@
 
             <Button
                 android:id="@+id/buttonGuia01"
-                android:layout_width="57dp"
-                android:layout_height="71dp"
+                android:layout_width="73dp"
+                android:layout_height="83dp"
                 android:layout_weight="1"
                 android:backgroundTint="#177FD4"
-                android:textSize="24sp"
+                android:text="10"
+                android:textSize="20sp"
                 android:textStyle="italic" />
 
             <Space
@@ -75,7 +73,7 @@
                 android:layout_weight="1" />
 
             <com.nitish.typewriterview.TypeWriterView
-                android:id="@+id/textView10"
+                android:id="@+id/textView01"
                 android:layout_width="256dp"
                 android:layout_height="70dp"
                 android:layout_gravity="start"
@@ -101,10 +99,11 @@
         <RelativeLayout
             android:id="@+id/layoutImg01"
             android:layout_width="match_parent"
-            android:layout_height="160dp">
+            android:layout_height="160dp"
+            android:visibility="invisible">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/imageView01"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
                 app:srcCompat="@drawable/imgform110_01" />
@@ -117,7 +116,7 @@
         <LinearLayout
             android:id="@+id/layoutGuia02"
             android:layout_width="match_parent"
-            android:layout_height="71dp"
+            android:layout_height="83dp"
             android:orientation="horizontal"
             android:visibility="invisible">
 
@@ -128,11 +127,11 @@
 
             <Button
                 android:id="@+id/buttonGuia02"
-                android:layout_width="57dp"
-                android:layout_height="71dp"
+                android:layout_width="73dp"
+                android:layout_height="83dp"
                 android:layout_weight="1"
                 android:backgroundTint="#177FD4"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="italic"
                 android:visibility="visible" />
 
@@ -142,7 +141,7 @@
                 android:layout_weight="1" />
 
             <com.nitish.typewriterview.TypeWriterView
-                android:id="@+id/textView11"
+                android:id="@+id/textView02"
                 android:layout_width="256dp"
                 android:layout_height="70dp"
                 android:layout_gravity="start"
@@ -173,7 +172,7 @@
             android:visibility="invisible">
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/imageView02"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
                 app:srcCompat="@drawable/imgform110_01"
@@ -219,7 +218,7 @@
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/button9"
+                android:id="@+id/buttonVolver"
                 android:layout_width="185dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
