@@ -44,7 +44,8 @@ public class MainActivityMenu extends AppCompatActivity {
         this.botonInicioSecion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivityMenu.this, MainActivityGuia.class));
+                startActivity(new Intent(MainActivityMenu.this, MainActivityGuia.class).putExtra("id1","1"));
+
             }
         });
     }

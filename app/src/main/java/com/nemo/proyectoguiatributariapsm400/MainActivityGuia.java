@@ -37,13 +37,15 @@ public class MainActivityGuia extends AppCompatActivity {
 
     public DatosGuia datosGuia;
     public AlphaAnimation animGuia;
-    public int controlAparicion = 1;
+    public int controlAparicion = 0;
+    public int idGuia;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main_guia);
+        idGuia = Integer.parseInt(getIntent().getStringExtra("id1"));
 
         this.disenioTitulo01 = (LinearLayout) findViewById(R.id.layoutGuia01);
         this.disenioTitulo02 = (LinearLayout) findViewById(R.id.layoutGuia02);
@@ -66,17 +68,9 @@ public class MainActivityGuia extends AppCompatActivity {
         escucharBotonContinuar();
 
         new Handler().postDelayed(new Runnable() {
-            @SuppressLint("DiscouragedApi")
             @Override
             public void run() {
-                disenioTitulo01.setVisibility(View.VISIBLE);
-                imgPresentacion01.setVisibility(View.VISIBLE);
-                botonGuia01.setText(controlAparicion + "");
-                textoGuia01.animateText(datosGuia.obtenerDescripsionGuia(controlAparicion, datosGuia.getGuiaInicioSecion()));
-                textoGuia01.setCharacterDelay(80);
-                imgGuia01.setImageResource(getResources().getIdentifier(datosGuia.obtenerRutaImgGuia(controlAparicion, datosGuia.getGuiaInicioSecion()), "drawable", getPackageName()));
-                disenioTitulo01.startAnimation(animGuia);
-                imgPresentacion01.startAnimation(animGuia);
+                aparecerInicioSecion01();
             }
         }, 2000);
 
@@ -102,27 +96,39 @@ public class MainActivityGuia extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (controlAparicion % 2 != 0) {
-                    controlAparicion++;
-                    disenioTitulo02.setVisibility(View.VISIBLE);
-                    imgPresentacion02.setVisibility(View.VISIBLE);
-                    botonGuia02.setText(controlAparicion + "");
-                    textoGuia02.animateText(datosGuia.obtenerDescripsionGuia(controlAparicion, datosGuia.getGuiaInicioSecion()));
-                    textoGuia02.setCharacterDelay(80);
-                    imgGuia02.setImageResource(getResources().getIdentifier(datosGuia.obtenerRutaImgGuia(controlAparicion, datosGuia.getGuiaInicioSecion()), "drawable", getPackageName()));
-                    disenioTitulo02.startAnimation(animGuia);
-                    imgPresentacion02.startAnimation(animGuia);
+                    aparecerInicioSecion02();
                 } else {
-                    controlAparicion++;
-                    disenioTitulo02.setVisibility(View.INVISIBLE);
-                    imgPresentacion02.setVisibility(View.INVISIBLE);
-                    botonGuia01.setText(controlAparicion + "");
-                    textoGuia01.animateText(datosGuia.obtenerDescripsionGuia(controlAparicion, datosGuia.getGuiaInicioSecion()));
-                    textoGuia01.setCharacterDelay(80);
-                    imgGuia01.setImageResource(getResources().getIdentifier(datosGuia.obtenerRutaImgGuia(controlAparicion, datosGuia.getGuiaInicioSecion()), "drawable", getPackageName()));
-                    disenioTitulo01.startAnimation(animGuia);
-                    imgPresentacion01.startAnimation(animGuia);
+                    aparecerInicioSecion01();
                 }
             }
         });
+    }
+
+    @SuppressLint("DiscouragedApi")
+    public void aparecerInicioSecion01() {
+        controlAparicion++;
+        disenioTitulo01.setVisibility(View.VISIBLE);
+        imgPresentacion01.setVisibility(View.VISIBLE);
+        disenioTitulo02.setVisibility(View.INVISIBLE);
+        imgPresentacion02.setVisibility(View.INVISIBLE);
+        botonGuia01.setText(controlAparicion + "");
+        textoGuia01.animateText(datosGuia.obtenerDescripsionGuia(controlAparicion, datosGuia.getGuiaInicioSecion()));
+        textoGuia01.setCharacterDelay(80);
+        imgGuia01.setImageResource(getResources().getIdentifier(datosGuia.obtenerRutaImgGuia(controlAparicion, datosGuia.getGuiaInicioSecion()), "drawable", getPackageName()));
+        disenioTitulo01.startAnimation(animGuia);
+        imgPresentacion01.startAnimation(animGuia);
+    }
+
+    @SuppressLint("DiscouragedApi")
+    public void aparecerInicioSecion02(){
+        controlAparicion++;
+        disenioTitulo02.setVisibility(View.VISIBLE);
+        imgPresentacion02.setVisibility(View.VISIBLE);
+        botonGuia02.setText(controlAparicion + "");
+        textoGuia02.animateText(datosGuia.obtenerDescripsionGuia(controlAparicion, datosGuia.getGuiaInicioSecion()));
+        textoGuia02.setCharacterDelay(80);
+        imgGuia02.setImageResource(getResources().getIdentifier(datosGuia.obtenerRutaImgGuia(controlAparicion, datosGuia.getGuiaInicioSecion()), "drawable", getPackageName()));
+        disenioTitulo02.startAnimation(animGuia);
+        imgPresentacion02.startAnimation(animGuia);
     }
 }
