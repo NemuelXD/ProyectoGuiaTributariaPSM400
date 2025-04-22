@@ -22,27 +22,28 @@
             android:layout_height="25dp" />
 
         <LinearLayout
+            android:id="@+id/layoutTitulo"
             android:layout_width="298dp"
             android:layout_height="101dp"
             android:layout_gravity="center"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/textViewTitulo"
                 android:layout_width="235dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:text="INICIO DE SECION"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/imageViewGif02"
                 android:layout_width="89dp"
                 android:layout_height="100dp"
-                android:src="@drawable/gif_asistente2" />
+                 />
         </LinearLayout>
 
         <LinearLayout
@@ -106,7 +107,7 @@
                 android:id="@+id/imageView01"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
-                app:srcCompat="@drawable/imgform110_01" />
+                app:srcCompat="@drawable/imgforminicio_01" />
         </RelativeLayout>
 
         <Space
@@ -175,7 +176,7 @@
                 android:id="@+id/imageView02"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
-                app:srcCompat="@drawable/imgform110_01"
+                app:srcCompat="@drawable/imgforminicio_01"
                 tools:layout_editor_absoluteX="-201dp"
                 tools:layout_editor_absoluteY="555dp" />
 

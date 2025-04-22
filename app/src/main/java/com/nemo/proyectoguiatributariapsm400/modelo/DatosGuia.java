@@ -25,13 +25,17 @@ public class DatosGuia {
     }
 
     public void cargarDatosInicioSecion() {
-        this.guiaInicioSecion.adiFinal(new Guia(1, "Debe ingresar al siguiente sitio web https://www.impuestos.gob.bo", "imgform110_01"));
-        this.guiaInicioSecion.adiFinal(new Guia(2, "Seleccione la opcion \"Siat en linea\".", "imgform110_01"));
-        this.guiaInicioSecion.adiFinal(new Guia(3, "En la Siguiente seccion elija la opcion: \"Sistema integrado de la administracion tributaria\".","imgform110_02"));
+        this.guiaInicioSecion.adiFinal(
+                new Guia(1, "Debe ingresar al siguiente sitio web https://www.impuestos.gob.bo", "imgforminicio_01"));
+        this.guiaInicioSecion.adiFinal(
+                new Guia(2, "Seleccione la opcion \"Siat en linea\".", "imgforminicio_01"));
+        this.guiaInicioSecion.adiFinal(
+                new Guia(3, "En la Siguiente seccion elija la opcion: \"Sistema integrado de la administracion tributaria\".", "imgforminicio_02"));
     }
 
     public void cargarDatosForm110() {
-
+        this.guiaForm110.adiFinal(new Guia(1, "Una ves que usted haya seleccionado la opcion RC-IVA se abrira la siguiente ventana y seleccione \"Formulario 110 de Dependientes\":", "imgform110_01"));
+        this.guiaForm110.adiFinal(new Guia(2,"Luego se abrira el formulario 110 de Dependientes en el cual se observa el formulario de cada gestion y seleccione:","imgform110_02"));
     }
 
     public void cargarDatosForm610() {
@@ -50,10 +54,10 @@ public class DatosGuia {
 
     }
 
-    public int obtenerCantidadGuias(ListaSimple listaGuia){
-        int cont=0;
+    public int obtenerCantidadGuias(ListaSimple listaGuia) {
+        int cont = 0;
         Nodo r = listaGuia.getP();
-        while (r != null){
+        while (r != null) {
             cont++;
             r = r.getSig();
         }

@@ -15,6 +15,11 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivityMenu extends AppCompatActivity {
     public ImageButton imgBotonInicio;
     public Button botonInicioSecion;
+    public Button botonForm110;
+    public Button botonForm610;
+    public Button botonForm200;
+    public Button botonForm400;
+    public Button botonFormRCIVA;
 
 
     @Override
@@ -25,6 +30,11 @@ public class MainActivityMenu extends AppCompatActivity {
 
         this.imgBotonInicio = (ImageButton) findViewById(R.id.imgButtonInicio);
         this.botonInicioSecion = (Button) findViewById(R.id.buttonInicioSesion);
+        this.botonForm110 = (Button) findViewById(R.id.buttonForm110);
+        this.botonForm610 = (Button) findViewById(R.id.buttonForm610);
+        this.botonForm200 = (Button) findViewById(R.id.buttonForm200);
+        this.botonForm400 = (Button) findViewById(R.id.buttonForm400);
+        this.botonFormRCIVA = (Button) findViewById(R.id.buttonFormRCIVA);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -44,8 +54,42 @@ public class MainActivityMenu extends AppCompatActivity {
         this.botonInicioSecion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivityMenu.this, MainActivityGuia.class).putExtra("id1","1"));
+                startActivity(new Intent(MainActivityMenu.this, MainActivityGuia.class).putExtra("id", "1"));
+            }
+        });
 
+        this.botonForm110.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivityMenu.this, MainActivityGuia.class).putExtra("id", "2"));
+            }
+        });
+
+        this.botonForm610.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivityMenu.this, MainActivityGuia.class).putExtra("id", "3"));
+            }
+        });
+
+        this.botonForm200.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivityMenu.this, MainActivityGuia.class).putExtra("id", "4"));
+            }
+        });
+
+        this.botonForm400.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivityMenu.this, MainActivityGuia.class).putExtra("id", "5"));
+            }
+        });
+
+        this.botonFormRCIVA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivityMenu.this, MainActivityGuia.class).putExtra("id", "6"));
             }
         });
     }
