@@ -20,6 +20,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.nemo.proyectoguiatributariapsm400.modelo.DatosGuia;
+import com.nemo.proyectoguiatributariapsm400.modelo.ListaSimple;
 import com.nitish.typewriterview.TypeWriterView;
 
 import pl.droidsonroids.gif.GifImageView;
@@ -42,9 +43,11 @@ public class MainActivityGuia extends AppCompatActivity {
     public ImageView imgGuia01;
     public ImageView imgGuia02;
     public DatosGuia datosGuia;
-    public AlphaAnimation animGuia;
+    public AlphaAnimation animGuia01;
+    public AlphaAnimation animGuia02;
     public int controlAparicion = 0;
     public int idGuia;
+    public ListaSimple guia;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,26 +73,34 @@ public class MainActivityGuia extends AppCompatActivity {
         this.botonVolver = (Button) findViewById(R.id.buttonVolver);
 
         this.datosGuia = new DatosGuia();
-        this.animGuia = new AlphaAnimation(0.0f, 1.0f);
-        this.animGuia.setDuration(2000);
+        this.animGuia01 = new AlphaAnimation(0.0f, 1.0f);
+        this.animGuia01.setDuration(2000);
+        this.animGuia02 = new AlphaAnimation(0.0f, 1.0f);
+        this.animGuia02.setDuration(2000);
 
         if (idGuia == 1) {
             cargarTituloGuia("INICIO DE SECION", "gif_asistente2", Color.rgb(93, 173, 226));
+            this.guia = datosGuia.getGuiaInicioSecion();
         }
         if (idGuia == 2) {
             cargarTituloGuia("FORMULARIO 110", "gif_asistente2", Color.rgb(70, 223, 90));
+            this.guia = datosGuia.getGuiaForm110();
         }
         if (idGuia == 3) {
             cargarTituloGuia("FORMULARIO 610", "gif_asistente2", Color.rgb(245, 48, 90));
+            this.guia = datosGuia.getGuiaForm610();
         }
         if (idGuia == 4) {
             cargarTituloGuia("FORMULARIO 200", "gif_asistente3", Color.rgb(219, 51, 245));
+            this.guia = datosGuia.getGuiaForm200();
         }
         if (idGuia == 5) {
             cargarTituloGuia("FORMULARIO 400", "gif_asistente3", Color.rgb(245, 127, 50));
+            this.guia = datosGuia.getGuiaForm400();
         }
         if (idGuia == 6) {
             cargarTituloGuia("FORMULARIO RC-IVA", "gif_asistente3", Color.rgb(51, 229, 188));
+            this.guia = datosGuia.getGuiaRCIVA();
         }
 
         escucharBotonVolver();
@@ -98,9 +109,9 @@ public class MainActivityGuia extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                aparecerInicioSecion01();
+                aparecerGuia01(guia);
             }
-        }, 1500);
+        }, 1000);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -124,9 +135,12 @@ public class MainActivityGuia extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (controlAparicion % 2 != 0) {
-                    aparecerInicioSecion02();
+                    aparecerGuia02(guia);
                 } else {
-                    aparecerInicioSecion01();
+                    aparecerGuia01(guia);
+                }
+                if (controlAparicion + 1 > datosGuia.obtenerCantidadGuias(guia)) {
+                    botonContinuar.setEnabled(false);
                 }
             }
         });
@@ -141,30 +155,30 @@ public class MainActivityGuia extends AppCompatActivity {
     }
 
     @SuppressLint("DiscouragedApi")
-    public void aparecerInicioSecion01() {
+    public void aparecerGuia01(ListaSimple guia) {
         controlAparicion++;
         disenioTitulo01.setVisibility(View.VISIBLE);
         imgPresentacion01.setVisibility(View.VISIBLE);
         disenioTitulo02.setVisibility(View.INVISIBLE);
         imgPresentacion02.setVisibility(View.INVISIBLE);
         botonGuia01.setText(controlAparicion + "");
-        textoGuia01.animateText(datosGuia.obtenerDescripsionGuia(controlAparicion, datosGuia.getGuiaInicioSecion()));
+        textoGuia01.animateText(datosGuia.obtenerDescripsionGuia(controlAparicion, guia));
         textoGuia01.setCharacterDelay(80);
-        imgGuia01.setImageResource(getResources().getIdentifier(datosGuia.obtenerRutaImgGuia(controlAparicion, datosGuia.getGuiaInicioSecion()), "drawable", getPackageName()));
-        disenioTitulo01.startAnimation(animGuia);
-        imgPresentacion01.startAnimation(animGuia);
+        imgGuia01.setImageResource(getResources().getIdentifier(datosGuia.obtenerRutaImgGuia(controlAparicion, guia), "drawable", getPackageName()));
+        disenioTitulo01.startAnimation(animGuia01);
+        imgPresentacion01.startAnimation(animGuia01);
     }
 
     @SuppressLint("DiscouragedApi")
-    public void aparecerInicioSecion02() {
+    public void aparecerGuia02(ListaSimple guia) {
         controlAparicion++;
         disenioTitulo02.setVisibility(View.VISIBLE);
         imgPresentacion02.setVisibility(View.VISIBLE);
         botonGuia02.setText(controlAparicion + "");
-        textoGuia02.animateText(datosGuia.obtenerDescripsionGuia(controlAparicion, datosGuia.getGuiaInicioSecion()));
+        textoGuia02.animateText(datosGuia.obtenerDescripsionGuia(controlAparicion, guia));
         textoGuia02.setCharacterDelay(80);
-        imgGuia02.setImageResource(getResources().getIdentifier(datosGuia.obtenerRutaImgGuia(controlAparicion, datosGuia.getGuiaInicioSecion()), "drawable", getPackageName()));
-        disenioTitulo02.startAnimation(animGuia);
-        imgPresentacion02.startAnimation(animGuia);
+        imgGuia02.setImageResource(getResources().getIdentifier(datosGuia.obtenerRutaImgGuia(controlAparicion, guia), "drawable", getPackageName()));
+        disenioTitulo02.startAnimation(animGuia02);
+        imgPresentacion02.startAnimation(animGuia02);
     }
 }
