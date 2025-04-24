@@ -10,6 +10,7 @@ constraintlayout = "2.2.1"
 glide = "4.16.0"
 gifDrawable = "1.2.29"
 typewriter = "v1.3"
+workmanager = "2.10.1"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -22,6 +23,7 @@ constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayo
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 gifDrawable = { group = "pl.droidsonroids.gif", name = "android-gif-drawable", version.ref = "gifDrawable" }
 typewriter = { group = "com.github.NitishGadangi", name = "TypeWriter-TextView", version.ref = "typewriter" }
+androidx-work = { module = "androidx.work:work-runtime", version.ref = "workmanager" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

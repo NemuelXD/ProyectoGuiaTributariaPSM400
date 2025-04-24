@@ -185,7 +185,8 @@
                 android:layout_height="50dp"
                 android:layout_marginLeft="158dp"
                 android:layout_marginTop="105dp"
-                android:src="@drawable/gif_hand" />
+                android:src="@drawable/gif_hand"
+                android:visibility="invisible" />
         </RelativeLayout>
 
         <Space

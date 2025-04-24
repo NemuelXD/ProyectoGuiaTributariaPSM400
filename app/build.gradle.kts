@@ -38,6 +38,7 @@ dependencies {
     implementation(libs.glide) //libreria para gif
     implementation(libs.gifDrawable)
     implementation(libs.typewriter)
+    implementation(libs.androidx.work)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

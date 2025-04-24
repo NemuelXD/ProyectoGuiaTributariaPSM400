@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_color1"
+    tools:context=".MainActivityNotificacion">
+
+    <LinearLayout
+        android:layout_width="406dp"
+        android:layout_height="731dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ACTIVAR RECORDATORIO"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/textViewFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ingrese su NIT (ultimo digito 0-9):"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/editTextNumberNIT"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:textColor="#FFFFFF" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="13dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/textViewHora"
+                android:layout_width="206dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Hora seleccionada"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/buttonHora"
+                android:layout_width="122dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Seleccionar Hora" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <Button
+            android:id="@+id/buttonGuardarNotifi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar notificacion" />
+
+        <Button
+            android:id="@+id/buttonEliminarNotifi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Eliminar notificacion" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <ImageButton
+            android:id="@+id/imageButtonHom"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/inicio" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

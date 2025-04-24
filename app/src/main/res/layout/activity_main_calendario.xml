@@ -19,13 +19,13 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="20dp" />
+            android:layout_height="43dp" />
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="CALENDARIO TRIBUTARIO"
+            android:text="CALENDARIO TRIBUTARIO 2025"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
@@ -35,12 +35,24 @@
             android:layout_width="match_parent"
             android:layout_height="20dp" />
 
-        <CalendarView
-            android:id="@+id/calendarView"
+        <ListView
+            android:id="@+id/listViewCalendario"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:dateTextAppearance="@style/CustomDateText"
-            android:weekDayTextAppearance="@style/CustomWeekDayText" />
+            android:layout_height="522dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <ImageButton
+            android:id="@+id/imageButtonHome"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/inicio" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

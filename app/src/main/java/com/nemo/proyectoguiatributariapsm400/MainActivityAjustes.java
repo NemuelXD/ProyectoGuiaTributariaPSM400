@@ -16,6 +16,7 @@ public class MainActivityAjustes extends AppCompatActivity {
 
     public ImageButton imgBotonInicio;
     public Button botonCalendario;
+    public Button botonRecordatorio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class MainActivityAjustes extends AppCompatActivity {
 
         this.imgBotonInicio = (ImageButton) findViewById(R.id.imgButtonInicioA);
         this.botonCalendario = (Button) findViewById(R.id.buttonCalendario);
+        this.botonRecordatorio = (Button) findViewById(R.id.buttonRecordatorio);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -32,11 +34,10 @@ public class MainActivityAjustes extends AppCompatActivity {
             return insets;
         });
 
-        this.imgBotonInicio.setOnClickListener(new View.OnClickListener() {
+        this.botonRecordatorio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivityAjustes.this, MainActivity.class));
-                overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
+                startActivity(new Intent(MainActivityAjustes.this, MainActivityNotificacion.class));
             }
         });
 
@@ -44,6 +45,14 @@ public class MainActivityAjustes extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivityAjustes.this, MainActivityCalendario.class));
+            }
+        });
+
+        this.imgBotonInicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivityAjustes.this, MainActivity.class));
+                overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
             }
         });
     }
