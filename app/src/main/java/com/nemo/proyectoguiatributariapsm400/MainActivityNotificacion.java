@@ -103,33 +103,6 @@ public class MainActivityNotificacion extends AppCompatActivity {
         this.botonEliminarNotifi = (Button) findViewById(R.id.buttonEliminarNotifi);
         this.botonInicio = (ImageButton) findViewById(R.id.imageButtonHom);
 
-        /*
-        this.botonFecha.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                calendario.set(2025,3,24);
-
-                anio = fechaActual.get(Calendar.YEAR);
-                mes = fechaActual.get(Calendar.MONTH);
-                dia = fechaActual.get(Calendar.DAY_OF_MONTH);
-
-                DatePickerDialog datePickerDialog = new DatePickerDialog(view.getContext(), new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker datePicker, int y, int m, int d) {
-                        calendario.set(Calendar.DAY_OF_MONTH, d);
-                        calendario.set(Calendar.MONTH, m);
-                        calendario.set(Calendar.YEAR, y);
-
-                        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
-                        String cadenaFecha = format.format(calendario.getTime());
-                        vistaFecha.setText(cadenaFecha);
-
-                    }
-                }, anio, mes, dia);
-                datePickerDialog.show();
-            }
-        });*/
-
         this.botonHora.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
